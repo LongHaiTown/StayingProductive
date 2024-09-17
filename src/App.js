@@ -1,4 +1,7 @@
 import './App.css';
+import Weekday from './Weekday.js';
+
+
 
 function App() {
   return (
@@ -15,6 +18,20 @@ function App() {
 
 
       <div className='scheduleBoard'>
+        <div className='date'>1</div>
+        <div className='date'>2</div>
+        <div className='date'>3</div>
+        <div className='date'>4</div>
+        <div className='date'>5</div>
+        <div className='date'>6</div>
+        <div className='date'>7</div>
+        <div className='date'>8</div>
+
+        <div className='date' id='morning'>Sáng</div>
+        <div className='date' id='afternoon'>Trưa</div>
+        <div className='date' id='evening'>Chiều</div>
+        <Weekday/>
+
       </div>
 
       <div className='todo-things'>
@@ -29,3 +46,4 @@ function App() {
 }
 
 export default App;
+
