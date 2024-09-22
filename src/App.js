@@ -1,9 +1,12 @@
 import './App.css';
 import Weekday from './Weekday.js';
+import AppFunctionSection from './AppFunctionSection.js';
 
-
+import React,{ useState } from 'react';
 
 function App() {
+  const [sharedData, setSharedData] = useState([]);
+
   return (
     <div className="App">
       <div className='outer-app-title'>
@@ -18,7 +21,7 @@ function App() {
 
 
       <div className='scheduleBoard'>
-        <div className='date'>1</div>
+        <div className='date'></div>
         <div className='date'>2</div>
         <div className='date'>3</div>
         <div className='date'>4</div>
@@ -30,17 +33,11 @@ function App() {
         <div className='date' id='morning'>Sáng</div>
         <div className='date' id='afternoon'>Trưa</div>
         <div className='date' id='evening'>Chiều</div>
-        <Weekday/>
+        <Weekday thingstodo = {sharedData }/>
 
       </div>
-
-      <div className='todo-things'>
-        <div className='control-panel'>
-
-        </div>
-        <div className='tpplist'>
-        </div>
-      </div>
+      <AppFunctionSection setSharedData={setSharedData}/>
+      
     </div>
   );
 }

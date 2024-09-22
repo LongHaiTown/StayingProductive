@@ -1,23 +1,24 @@
 
 
-const Specificday= () => {
-
+const Specificday= ({specificthing}) => {
+    console.log(specificthing.title);
     var timesInaDay = [];
     var i;
     for (i =0 ; i< 6; i++){
         const time = (
             <div
                 className="things"
-                key={`day-${i}`} // Mỗi phần tử cần có key duy nhất
+                key={`day-${i}`} 
                 style={{
-                    backgroundColor: "purple",
                     margin: "5px",
                     padding: "10px",
                     border: "1px solid black",
                     display: "inline-block",
                     height:"auto"
                 }}
-            ></div>
+            >
+                <p style={{margin:"0", padding:"0"}}></p>
+            </div>
             )
             timesInaDay.push(time);
     }
